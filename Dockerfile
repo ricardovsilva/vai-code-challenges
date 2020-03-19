@@ -5,7 +5,7 @@ RUN apk add libexif-dev
 RUN apk add build-base
 RUN apk add sqlite-dev
 RUN apk add tzdata
-COPY ./src /app
+COPY . /app
 WORKDIR /app
 RUN bundle
 

@@ -1,6 +1,24 @@
+# README
 
-# VAI CODE CHALLENGES
+This README would normally document whatever steps are necessary to get the
+application up and running.
 
-Below choose the code-challenge specific for your position:
+Things you may want to cover:
 
-* [Back-End Position](./BACKEND.md)
+* Ruby version
+
+* System dependencies
+
+* Configuration
+
+* Database creation
+
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...
