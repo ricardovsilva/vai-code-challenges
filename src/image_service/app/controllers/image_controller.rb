@@ -1,13 +1,18 @@
-class ImageController < ActionController::API
+class ImageController < ApplicationController
   def show
-    Image.find params[:id]
+    render json: Image.find(params[:id])
   end
 
   def all
-    Image.all
+    render json: Image.all
   end
 
   def save
-    'Hello World!'
+    Image.new(save_image_params).save
+  end
+
+  private
+  def save_image_params
+    params.permit(:description, :owner, :file)
   end
 end
