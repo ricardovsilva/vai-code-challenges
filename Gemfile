@@ -16,6 +16,9 @@ group :development, :test do
   gem 'factory_bot_rails'
   gem 'database_cleaner'
   gem 'sqlite3', '~> 1.4'
+  gem 'rspec'
+  gem 'rspec-rails', '~> 3.6'
+  gem 'rspec-expectations'
 end
 
 
@@ -26,9 +29,6 @@ group :development do
 end
 
 group :test do
-  gem 'rspec'
-  gem 'rspec-rails', '~> 3.6'
-  gem 'rspec-expectations'
   gem 'database_cleaner'
   gem 'factory_bot_rails'
   gem 'faker'
