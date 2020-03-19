@@ -10,6 +10,7 @@ COPY . /app
 WORKDIR /app
 RUN bundle
 RUN rake db:migrate
+RUN rake spec
 
 EXPOSE 3000
 

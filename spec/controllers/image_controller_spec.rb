@@ -33,6 +33,10 @@ RSpec.describe ImageController, type: :controller do
       it('returns image metadata') do
         expect(response['metadata'].nil?).to be false
       end
+
+      it('returns image creation date') do
+        expect(response['created_at'].nil?).to be false
+      end
     end
 
     context 'do a GET /images/:id to an unexistent id' do
@@ -92,17 +96,18 @@ RSpec.describe ImageController, type: :controller do
       context 'with owner' do
         let!(:response) do 
           form_data[:owner] = 'bar'
-          post :save, params: form_data
+          response = post :save, params: form_data
         end
+
+        let(:status) { response.status }
+        let(:body) { JSON.parse(response.body) }
 
         it('returns status code 201') do
-          expect(response.status).to be 201
+          expect(status).to be 201
         end
 
-        it('should list recently uploaded image') do
-          response = get :all
-          target = JSON.parse(response.body)
-          expect(target.first['description']).to eq 'foo'
+        it('should return recently uploaded image') do
+          expect(body['description']).to eq 'foo'
         end
       end
 
