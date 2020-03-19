@@ -36,8 +36,6 @@ ActiveRecord::Schema.define(version: 2020_03_18_152136) do
   create_table "images", force: :cascade do |t|
     t.string "description"
     t.string "owner"
-    t.binary "metadata"
-    t.string "url"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
