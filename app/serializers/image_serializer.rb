@@ -7,6 +7,7 @@ class ImageSerializer < ActiveModel::Serializer
   end
 
   def metadata
+    object.file.analyze unless object.file.analyzed?
     object.file.metadata
   end
 end
