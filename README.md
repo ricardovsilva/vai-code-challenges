@@ -60,3 +60,5 @@ Post a new image so it can be stored along with their metadata. To do that you n
 
 This endpoint returns `status code 201` and image is stored. Also it returns all the image data as json, take a look on `GET /images/:id` endpoint since the return is the same.  
 If any of fields below is missing, this endpoint is going to return `status code 422` without body and image is not going to be saved.
+
+PS: Since metadata extraction run in background, sometimes data returned from `POST /images` is not going to have metadata itself. To get full metadata of image do a request to `GET /images/:id`
