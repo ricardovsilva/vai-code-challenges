@@ -14,7 +14,8 @@ class ImageController < ApplicationController
     image = Image.new(save_image_params)
     unless image.save
       render json: {status: 'ERROR', message:'Image not saved', data:image.errors}, status: :unprocessable_entity
-    end   
+    end
+    head 201
   end
 
   private

@@ -95,8 +95,8 @@ RSpec.describe ImageController, type: :controller do
           post :save, params: form_data
         end
 
-        it('returns status code 204') do
-          expect(response.status).to be 204
+        it('returns status code 201') do
+          expect(response.status).to be 201
         end
 
         it('should list recently uploaded image') do
