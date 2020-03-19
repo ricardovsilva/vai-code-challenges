@@ -4,12 +4,12 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.7.0'
 
 gem 'rails', '~> 6.0.2', '>= 6.0.2.1'
-gem 'sqlite3', '~> 1.4'
 gem 'puma', '~> 4.1'
 gem 'active_model_serializers', '~> 0.10.0'
 gem 'bootsnap', '>= 1.4.2', require: false
 gem 'mini_magick'
 gem 'exif'
+gem 'pg'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -17,6 +17,7 @@ group :development, :test do
   gem 'faker'
   gem 'factory_bot_rails'
   gem 'database_cleaner'
+  gem 'sqlite3', '~> 1.4'
 end
 
 group :development do
