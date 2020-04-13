@@ -54,6 +54,7 @@ If service is new and does not have any image stored, it endpoint can return `st
 ## POST /images
 Post a new image so it can be stored along with their metadata. To do that you need to post a form with the file with some mandatory fields:
 | field | type | description |
+|-------|------|-------------|
 | owner | string | name of image owner |
 | description | string | some arbitrary description |
 | file | File | the file of image itself |
